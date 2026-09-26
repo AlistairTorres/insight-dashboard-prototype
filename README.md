@@ -1,18 +1,21 @@
 # Insight Dashboard Prototype
 
-A small browser interface for extracting simple metadata from an article URL.
+A compact URL inspection dashboard that turns an article link into a readable metadata snapshot.
 
-## What it demonstrates
+## Highlights
 
-- URL validation with the built-in URL API
-- Deterministic path-term extraction
-- Accessible result status messages and metric cards
-- A dependency-free, local-only workflow
+- Validate HTTP and HTTPS URLs with the built-in URL API
+- Extract the host and useful terms from the path
+- Produce a small reading-time estimate from the available metadata
+- Present results as structured metric cards
+- Keep analysis local without fetching remote page content
 
-## Run
+## Technical approach
 
-Open index.html in a modern browser. The prototype does not fetch or analyse remote page content.
+The project separates input validation, deterministic analysis and result rendering. Invalid input is reported through the interface, while valid results are rendered with DOM nodes rather than injecting untrusted markup.
 
-## Scope
+## Run locally
 
-This is a learning project for clear information display and basic client-side behaviour. It does not claim to provide AI summaries, sentiment analysis or SEO scoring.
+Open index.html in a modern browser. No build step is required.
+
+The dashboard is a focused exploration of information hierarchy, predictable client-side behaviour and readable output.
